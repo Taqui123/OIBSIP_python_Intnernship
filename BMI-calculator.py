@@ -35,24 +35,21 @@ def BMI_repo():
         label3.config(text="Your Health, Your Future \n- Time for Transformation!!!", fg="red")
 
 
-# icon
 image_icon = PhotoImage(file="Icon.png")
 root.iconphoto(False, image_icon)
 
-# topn
 top = PhotoImage(file="top.png")
 top_image = Label(root, image=top, background="#f0f1f5")
 top_image.place(x=-10, y=-10)
 
-# bottom box
+
 Label(root, width=72, height=18, bg="lightgreen").pack(side=BOTTOM)
 
-# two boxes
+
 box = PhotoImage(file="box.png")
 Label(root, image=box).place(x=20, y=100)
 Label(root, image=box).place(x=240, y=100)
 
-# Scale
 scale = PhotoImage(file="scale.png")
 Label(root, image=scale, bg="lightgreen").place(x=20, y=310)
 
