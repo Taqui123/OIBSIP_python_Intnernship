@@ -56,7 +56,6 @@ Label(root, image=box).place(x=240, y=100)
 scale = PhotoImage(file="scale.png")
 Label(root, image=scale, bg="lightgreen").place(x=20, y=310)
 
-###############slider1###########################
 current_value = tkinter.DoubleVar()
 
 
@@ -75,18 +74,13 @@ def slider_moved(event):
     secondimage.place(x=70, y=550 - size)
     secondimage.image = photo2
 
-
-# commands to change background color of scale
 style = ttk.Style()
 style.configure("TScale", background="white")
 slider = ttk.Scale(root, from_=0, to=220, orient='horizontal', style="TScale",
                    command=slider_moved, variable=current_value)
 
 slider.place(x=80, y=250)
-###############################################
 
-
-##@@@@@@@@@@@@@@@@@@@@slider2@@@@@@@@@@@@@@@@@@@
 current_value2 = tkinter.DoubleVar()
 
 
@@ -97,7 +91,6 @@ def get_current_value2():
 def slider_moved2(event):
     Weight.set(get_current_value2())
 
-# commands to change background color of scale
 style2 = ttk.Style()
 style2.configure("TScale", background="white")
 slider2 = ttk.Scale(root, from_=0, to=200, orient='horizontal', style="TScale",
@@ -110,11 +103,9 @@ slider2.place(x=300, y=250)
 height_label = Label(root, text="Height (in cm)", font="Lato 12 bold", bg="white")
 height_label.place(x=40, y=75)
 
-# Add a label for "Weight"
 weight_label = Label(root, text="Weight (in kg)", font="Lato 12 bold", bg="white")
 weight_label.place(x=260, y=75)
 
-# Entry Box
 Height = StringVar()
 Weight = StringVar()
 height = Entry(root, textvariable=Height, width=5, font="Arial 50", bg="#fff", fg="#000", bd=0,
@@ -127,7 +118,6 @@ weight = Entry(root, textvariable=Weight, width=5, font="Arial 50", bg="#fff", f
 weight.place(x=255, y=160)
 Weight.set(get_current_value2())
 
-# man Image
 secondimage = Label(root, bg="lightgreen")
 secondimage.place(x=70, y=530)
 
